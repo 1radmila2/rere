@@ -1,0 +1,47 @@
+@import '../css/variables.css';
+
+.score-board {
+  display: flex;
+  cursor: default;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.score-board .player-scores {
+  flex: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+}
+
+.score-board .player-scores.player-1 {
+  background-color: var(--player-1-color);
+}
+
+.score-board .player-scores.player-2 {
+  background-color: var(--player-2-color);
+}
+
+.score-board .player-scores .score-count {
+  margin: 0 12px;
+  padding: 36px;
+  font-size: 42px;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.score-board .player-scores .player-name {
+  font-size: 32px;
+  padding: 22px;
+}
+
+@media screen and (max-width: var(--tablet-width)) {
+  .score-board .player-scores .score-count {
+    padding: 18px;
+    font-size: 21px;
+  }
+
+  .score-board .player-scores .player-name {
+    padding: 11px;
+    font-size: 16px;
+  }
+}

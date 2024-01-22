@@ -1,0 +1,103 @@
+@import '../css/variables.css';
+
+.dashboard {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1436px;
+  padding: 10px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.dashboard .main-board {
+  width: 40%;
+  padding: 10px;
+}
+
+.dashboard .main-board .main-shipboard {
+  margin: 20px 0 0 0;
+}
+
+.dashboard .play-field {
+  flex: auto;
+  padding: 6px;
+  margin-left: 10px;
+  align-self: flex-start;
+  position: relative;
+}
+
+.dashboard .play-field.player-1 {
+  background-color: var(--player-1-color);
+}
+
+.dashboard .play-field .game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  background-color: rgba(242, 242, 242, 0.8);
+  color: var(--text-color);
+  font-size: 32px;
+  cursor: default;
+}
+
+.dashboard .play-field .reset-button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 2px solid;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 10px 12px;
+  color: currentColor;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: var(--tablet-width)) {
+  .dashboard {
+    flex-wrap: wrap;
+  }
+
+  .dashboard .main-board {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .dashboard .main-board .main-shipboard {
+    width: 66%;
+    height: 75%;
+    margin: 0 0 0 20px;
+  }
+
+  .dashboard .play-field {
+    order: -1;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: var(--phone-width)) {
+  .dashboard {
+    padding: 16px;
+    flex-wrap: wrap;
+  }
+
+  .dashboard .main-board {
+    width: 100%;
+    padding: 0;
+    display: block;
+  }
+
+  .dashboard .main-board .main-shipboard {
+    width: 100%;
+    height: 40%;
+    margin: 20px 0 0 0;
+  }
+}

@@ -1,0 +1,70 @@
+@import '../css/variables.css';
+
+.ship-board {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.ship-board .ship {
+  display: flex;
+}
+
+.ship-board .ship:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.ship-board .ship .ship-image {
+  width: 50%;
+  flex: none;
+}
+
+.ship-board .ship .ship-image > img {
+  width: 100%;
+  height: auto;
+}
+
+.ship-board .ship .ship-hits {
+  display: flex;
+  align-items: center;
+  margin-left: 22px;
+  overflow: hidden;
+}
+
+.ship-board .ship .ship-hitpoint {
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.ship-board .ship .ship-hitpoint.hit {
+  background-image: url('../assets/hit-small.png');
+}
+
+.ship-board .ship .ship-hitpoint.ok {
+  background-image: url('../assets/miss-small.png');
+}
+
+@media screen and (max-width: var(--tablet-width)) {
+  .ship-board {
+    flex-wrap: wrap;
+  }
+
+  .ship-board .ship {
+    width: 50%;
+  }
+
+  .ship-board .ship:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .ship-board .ship .ship-image {
+    width: 40%;
+  }
+
+  .ship-board .ship .ship-hitpoint {
+    width: 16px;
+    height: 16px;
+  }
+}
